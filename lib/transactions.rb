@@ -14,6 +14,11 @@ class Transactions
     @history.push(new_record)
   end
 
+  def debit(amount, balance)
+    new_record = {date: date_of_transaction, debit: amount, balance: balance}
+    @history.push(new_record)
+  end
+
   def date_of_transaction
     Time.now.strftime("%d/%m/%Y")
   end

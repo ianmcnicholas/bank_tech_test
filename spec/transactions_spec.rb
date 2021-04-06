@@ -20,6 +20,11 @@ describe Transactions do
       expect(transaction.history).to eq([{date: Time.now.strftime("%d/%m/%Y"), credit: 500, balance: 500}])
     end
 
+    it 'can build a debit transaction' do
+      transaction.debit(200, 300)
+      expect(transaction.history).to eq([{date: Time.now.strftime("%d/%m/%Y"), debit: 200, balance: 300}])
+    end
+
   end
 
 end
