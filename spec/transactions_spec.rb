@@ -11,9 +11,6 @@ describe Transactions do
   end
 
   context 'creating a transaction' do
-    it 'can create the date in dd/mm/yy format' do
-      expect(transaction.date_of_transaction).to eq(Time.now.strftime("%d/%m/%Y"))
-    end
 
     it 'can build a credit transaction' do
       transaction.credit(500, 500)

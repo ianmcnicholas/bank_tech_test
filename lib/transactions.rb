@@ -19,6 +19,8 @@ class Transactions
     @history.push(new_record)
   end
 
+  private
+
   def date_of_transaction
     Time.now.strftime("%d/%m/%Y")
   end
