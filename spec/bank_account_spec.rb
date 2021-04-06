@@ -1,23 +1,32 @@
 require 'bank_account'
 
 describe BankAccount do
+  let(:transactions) { double(:transactions) }
+  let(:account) { BankAccount.new(0, transactions) }
 
-  let(:account) { BankAccount.new}
-
+context 'upon creation:' do
   it 'should initialise with a balance of 0' do
     expect(account.balance).to eq 0
   end
 
+  it 'should create an empty history of transactions' do
+    allow(transactions).to receive(:history).and_return([])
+    expect(account.transactions.history).to eq([])
+  end
+end
+
+context 'making a deposit:' do
   it 'should increase the balance when a deposit is made' do
     account.deposit(500)
     expect(account.balance).to eq 500
   end
+end
 
+context 'making a withdrawal:' do
   it 'should increase the balance when a withdrawal is made' do
     account.withdraw(200)
     expect(account.balance).to eq -200
   end
-
-
+end
 
 end
