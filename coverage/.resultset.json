@@ -51,10 +51,6 @@
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
           null
         ]
       },
@@ -120,12 +116,45 @@
       },
       "/Users/ianmcnicholas/MAKERS/Week_10/tech_tests/bank_tech_test/lib/statements.rb": {
         "lines": [
-
+          1,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          1,
+          2,
+          2,
+          3,
+          null,
+          null,
+          null
         ]
       },
       "/Users/ianmcnicholas/MAKERS/Week_10/tech_tests/bank_tech_test/spec/statements_spec.rb": {
         "lines": [
-          1
+          1,
+          null,
+          1,
+          1,
+          4,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          2,
+          null,
+          null
         ]
       },
       "/Users/ianmcnicholas/MAKERS/Week_10/tech_tests/bank_tech_test/spec/transactions_spec.rb": {
@@ -156,6 +185,6 @@
         ]
       }
     },
-    "timestamp": 1617789954
+    "timestamp": 1617792690
   }
 }

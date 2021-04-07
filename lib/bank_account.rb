@@ -4,7 +4,7 @@ require_relative 'statements'
 class BankAccount
   attr_reader :balance, :transactions, :statements
 
-  def initialize(balance = 0, transactions = Transactions.new, statements = Statements.ew)
+  def initialize(balance = 0, transactions = Transactions.new, statements = Statements.new)
     @balance = balance
     @transactions = transactions
     @statements = statements

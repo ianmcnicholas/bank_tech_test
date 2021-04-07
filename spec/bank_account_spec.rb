@@ -46,8 +46,4 @@ describe BankAccount do
     end
   end
 
-  # context 'printing a statement' do
-  #   it 'should'
-  # end
-
 end
