@@ -56,6 +56,7 @@ This program was planned with three classes:
 * The BankAccount class would handle the balance of the account, and call upon the other classes.
 * The Transactions class would build a history of account transactions.
 * The Statements class would take the history of transactions and format it for printing.
+* Feature tests were conducted manually using IRB.
 ![Screenshot 2021-04-07 at 12 14 08](https://user-images.githubusercontent.com/75983723/113857733-c8874c80-979a-11eb-9ff7-aaa3d1291280.png)
 
 ## Approach and Assumptions ##

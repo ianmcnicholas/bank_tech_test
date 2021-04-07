@@ -6,7 +6,7 @@ require_relative 'statements'
 class BankAccount
   attr_reader :balance, :transactions, :statements
 
-  def initialize(balance = 0,
+  def initialize(balance = 0.00,
                  transactions = Transactions.new,
                  statements = Statements.new)
     @balance = balance
@@ -15,15 +15,14 @@ class BankAccount
   end
 
   def deposit(amount)
-    raise 'You must deposit a positive amount' if amount <= 0
+    raise 'You must deposit a positive amount' if amount <= 0.00
 
     @balance += amount
     @transactions.credit(amount, @balance)
   end
 
   def withdraw(amount)
-    raise 'You must withdraw a positive amount' if amount <= 0
-
+    raise 'You must withdraw a positive amount' if amount <= 0.00
     @balance -= amount
     @transactions.debit(amount, @balance)
   end

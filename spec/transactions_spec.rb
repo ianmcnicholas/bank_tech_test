@@ -14,12 +14,12 @@ describe Transactions do
   context 'creating a transaction' do
     it 'can build a credit transaction' do
       transaction.credit(500, 500)
-      expect(transaction.history).to eq([{ date: Time.now.strftime('%d/%m/%Y'), credit: 500, balance: 500 }])
+      expect(transaction.history).to eq([{ date: Time.now.strftime('%d/%m/%Y'), credit: '%.2f' % 500, balance: '%.2f' % 500 }])
     end
 
     it 'can build a debit transaction' do
       transaction.debit(200, 300)
-      expect(transaction.history).to eq([{ date: Time.now.strftime('%d/%m/%Y'), debit: 200, balance: 300 }])
+      expect(transaction.history).to eq([{ date: Time.now.strftime('%d/%m/%Y'), debit: '%.2f' % 200, balance: '%.2f' % 300 }])
     end
   end
 end
