@@ -1,7 +1,6 @@
 require 'statements'
 
 describe Statements do
-  let(:transactions) { double(:transactions) }
   let(:statements) { Statements.new }
 
   it 'should have a method to format transactions' do
