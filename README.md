@@ -58,4 +58,13 @@ This program was planned with three classes:
 
 ## Approach and Assumptions ##
 
-This program is a minimum viable product as per the specifications (see below).  
+This program is a minimum viable product as per the specifications (see below).
+
+The program is arranged such that a new account is created with a balance of 0, however if required this can be specified upon creation, e.g. with a starting balance of 50:
+```
+account = BankAccount.new(50)
+```
+
+The user is able to have a negative balance by withdrawing more than depositing, as it was not specified in the requirements to prevent this.
+
+The program will produce an error if the user attempts to deposit or withdraw a zero or negative amount.
