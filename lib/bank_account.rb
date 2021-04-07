@@ -13,11 +13,13 @@ class BankAccount
   end
 
   def deposit(amount)
+    fail "You must deposit a positive amount" if amount <= 0
     @balance += amount
     @transactions.credit(amount, @balance)
   end
 
   def withdraw(amount)
+    fail "You must withdraw a positive amount" if amount <= 0
     @balance -= amount
     @transactions.debit(amount, @balance)
   end

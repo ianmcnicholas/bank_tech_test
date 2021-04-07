@@ -31,6 +31,10 @@ describe BankAccount do
       expect(transactions).to receive(:credit).with(500, 500)
       account.deposit(500)
     end
+
+    it 'should raise an error if the deposit is not a positive integer' do
+      expect{ account.deposit(-500) }.to raise_error "You must deposit a positive amount"
+    end
   end
 
   context 'making a withdrawal:' do
@@ -43,6 +47,10 @@ describe BankAccount do
     it 'should tell the Transactions class to build a debit transaction' do
       expect(transactions).to receive(:debit).with(200, -200)
       account.withdraw(200)
+    end
+
+    it 'should raise an error if the withdrawal is not a positive integer' do
+      expect{ account.withdraw(-200) }.to raise_error "You must withdraw a positive amount"
     end
   end
 
