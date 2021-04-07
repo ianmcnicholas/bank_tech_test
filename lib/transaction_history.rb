@@ -11,7 +11,6 @@ class TransactionHistory
   def credit(amount, balance)
     new_record = { date: date_of_transaction, credit: '%.2f' % amount, balance: '%.2f' % balance }
     @history.push(new_record)
-    p @history
   end
 
   def debit(amount, balance)
