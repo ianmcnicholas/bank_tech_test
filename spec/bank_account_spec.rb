@@ -2,7 +2,8 @@ require 'bank_account'
 
 describe BankAccount do
   let(:transactions) { double(:transactions) }
-  let(:account) { BankAccount.new(0, transactions) }
+  let(:statements) { double(:statements) }
+  let(:account) { BankAccount.new(0, transactions, statements) }
 
   context 'upon creation:' do
     it 'should initialise with a balance of 0' do
@@ -12,6 +13,10 @@ describe BankAccount do
     it 'should create an empty history of transactions' do
       allow(transactions).to receive(:history).and_return([])
       expect(account.transactions.history).to eq([])
+    end
+
+    it 'should create a statement handler' do
+      expect(account.statements).to eq statements
     end
   end
 
@@ -40,4 +45,9 @@ describe BankAccount do
       account.withdraw(200)
     end
   end
+
+  # context 'printing a statement' do
+  #   it 'should'
+  # end
+
 end
