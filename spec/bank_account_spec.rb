@@ -26,13 +26,18 @@ describe BankAccount do
       expect(transactions).to receive(:credit).with(500, 500)
       account.deposit(500)
     end
-
   end
 
   context 'making a withdrawal:' do
     it 'should increase the balance when a withdrawal is made' do
+      allow(transactions).to receive(:debit).with(200, -200)
       account.withdraw(200)
       expect(account.balance).to eq(-200)
+    end
+
+    it 'should tell the Transactions class to build a debit transaction' do
+      expect(transactions).to receive(:debit).with(200, -200)
+      account.withdraw(200)
     end
   end
 end
