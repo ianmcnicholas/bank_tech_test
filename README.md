@@ -74,6 +74,11 @@ The user is able to have a negative balance by withdrawing more than depositing,
 
 The program will produce an error if the user attempts to deposit or withdraw a zero or negative amount.
 
+## Lessons Learnt ##
+
+* When testing for the use of the date e.g. Date.today, mock with a date different from today's date to have assurance that it is working.
+* Include a feature test file that a) runs through a whole user interactions and b) displays the acceptance criteria.
+
 ## Specification
 
 ### Requirements
