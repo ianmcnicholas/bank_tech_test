@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This class creates a history of transactions
-class Transactions
+class TransactionHistory
   attr_reader :history
 
   def initialize

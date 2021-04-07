@@ -11,15 +11,6 @@ describe BankAccount do
     it 'should initialise with a balance of 0' do
       expect(account.balance).to eq 0
     end
-
-    it 'should create an empty history of transactions' do
-      allow(transactions).to receive(:history).and_return([])
-      expect(account.transactions.history).to eq([])
-    end
-
-    it 'should create a statement handler' do
-      expect(account.statements).to eq statements
-    end
   end
 
   context 'making a deposit:' do
