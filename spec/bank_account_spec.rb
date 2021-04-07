@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'bank_account'
 
 describe BankAccount do
@@ -33,7 +35,7 @@ describe BankAccount do
     end
 
     it 'should raise an error if the deposit is not a positive integer' do
-      expect{ account.deposit(-500) }.to raise_error "You must deposit a positive amount"
+      expect { account.deposit(-500) }.to raise_error 'You must deposit a positive amount'
     end
   end
 
@@ -50,7 +52,7 @@ describe BankAccount do
     end
 
     it 'should raise an error if the withdrawal is not a positive integer' do
-      expect{ account.withdraw(-200) }.to raise_error "You must withdraw a positive amount"
+      expect { account.withdraw(-200) }.to raise_error 'You must withdraw a positive amount'
     end
   end
 

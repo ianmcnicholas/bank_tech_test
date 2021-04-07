@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# This class creates a history of transactions
 class Transactions
   attr_reader :history
 

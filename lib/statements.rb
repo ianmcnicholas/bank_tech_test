@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
+# This class formats the transactions into something printable
 class Statements
   def format(transactions_history)
     puts 'date || credit || debit || balance'
-    "#{extractor(transactions_history)}"
+    extractor(transactions_history).to_s
   end
 
   private

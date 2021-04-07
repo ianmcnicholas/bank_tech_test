@@ -48,6 +48,8 @@ account.print_statement
 ```
 quit
 ```
+<img width="874" alt="Screenshot 2021-04-07 at 13 16 14" src="https://user-images.githubusercontent.com/75983723/113864978-77c82180-97a3-11eb-806d-f7f597c16365.png">
+
 ## Planning ##
 
 This program was planned with three classes:
