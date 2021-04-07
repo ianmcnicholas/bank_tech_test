@@ -46,4 +46,11 @@ describe BankAccount do
     end
   end
 
+  context 'printing a statement' do
+    it 'should get a printed statement from Statements class' do
+      allow(transactions).to receive(:history).and_return([])
+      expect(statements).to receive(:format).with(transactions.history)
+      account.print_statement
+    end
+  end
 end

@@ -4,7 +4,9 @@ require_relative 'statements'
 class BankAccount
   attr_reader :balance, :transactions, :statements
 
-  def initialize(balance = 0, transactions = Transactions.new, statements = Statements.new)
+  def initialize(balance = 0,
+                 transactions = Transactions.new,
+                 statements = Statements.new)
     @balance = balance
     @transactions = transactions
     @statements = statements
@@ -19,11 +21,8 @@ class BankAccount
     @balance -= amount
     @transactions.debit(amount, @balance)
   end
-end
 
-#
-# TO DO:
-#   * test that the BankAccount class can update transactions
-#     with deposit and withdrawal
-#   * printer class to formatt Transactions
-#   * BankAccount prints transactions
+  def print_statement
+    @statements.format(@transactions.history)
+  end
+end

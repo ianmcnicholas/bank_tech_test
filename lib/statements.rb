@@ -5,9 +5,9 @@ class Statements
   end
 
   private
+
   def extractor(array)
-    reversed_array = array.reverse
-    reversed_array.each do |item|
+    array.reverse.each do |item|
       puts "#{item[:date]} || #{item[:credit]} || #{item[:debit]} || #{item[:balance]}"
     end
   end
