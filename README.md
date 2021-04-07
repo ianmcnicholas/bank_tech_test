@@ -21,7 +21,7 @@ bundle install
 ```
 rspec
 ```
-<img width="769" alt="Screenshot 2021-04-07 at 17 08 58" src="https://user-images.githubusercontent.com/75983723/113898844-23816980-97c4-11eb-85e6-dfdc6c3d0350.png">
+<img width="767" alt="Screenshot 2021-04-07 at 17 26 34" src="https://user-images.githubusercontent.com/75983723/113901109-6fcda900-97c6-11eb-830b-13d867a72da6.png">
 
 ### To run the program: ###
 ```
