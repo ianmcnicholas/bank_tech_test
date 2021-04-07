@@ -15,13 +15,13 @@ class BankAccount
   end
 
   def deposit(amount)
-    raise 'You must deposit a positive amount' if amount <= 0
+    raise 'You must deposit a positive amount' unless amount.to_i > 0
     @balance += amount
     transactions.credit(amount, @balance)
   end
 
   def withdraw(amount)
-    raise 'You must withdraw a positive amount' if amount <= 0
+    raise 'You must withdraw a positive amount' unless amount.to_i > 0
     @balance -= amount
     transactions.debit(amount, @balance)
   end
