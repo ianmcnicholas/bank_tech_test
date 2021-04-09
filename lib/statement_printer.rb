@@ -2,6 +2,7 @@
 
 # This class formats the transactions into something printable
 class StatementPrinter
+  
   def format(transactions_history)
     puts 'date || credit || debit || balance'
     "#{extractor(transactions_history)}"

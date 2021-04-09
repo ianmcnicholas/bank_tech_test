@@ -5,7 +5,7 @@ Initialise git in your local directory:
 ```
 git init
 ```
-Clone this project into your local directory:
+Fork and clone this project into your local directory:
 ```
 git clone https://github.com/ianmcnicholas/bank_tech_test.git
 ```
